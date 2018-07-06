@@ -1,0 +1,16 @@
+<html>
+<head>
+<title>Tax Calculator Beta</title>
+</head>
+<body>Form
+<form method="POST">
+{% csrf_token %}
+<label>Amount in Rupees<label>
+<input type=number name="amount">
+<input type="submit" value="Submit">
+</form>
+{% for msg in details %}
+	<br>{{ msg }}
+{% endfor %}
+</body>
+</html>
